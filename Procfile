@@ -1,1 +1,1 @@
-web: gunicorn tecnologyman.wsgi
+web: gunicorn config.wsgi
