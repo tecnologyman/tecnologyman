@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="grid md:grid-cols-2 gap-10 items-start mb-16">
+
+    <!-- COLUMNA IZQUIERDA -->
+    <div class="space-y-6">
+
+        <!-- HEADER -->
+        <div class="space-y-3">
+
+            <h1 class="text-5xl font-bold title-glow">
+                Perfil Gamer
+            </h1>
+
+            <p class="text-soft">
+                Rendimiento, análisis y mejora constante.
+            </p>
+
+            <p class="text-muted text-sm max-w-md">
+                Jugador competitivo enfocado en progresión y consistencia en entornos exigentes.
+            </p>
+
+        </div>
+
+        <!-- STATS -->
+        <div class="flex gap-3">
+
+            <div class="card px-4 py-2">
+                <p class="text-xs text-muted">Main</p>
+                <p class="primary font-bold">Valorant</p>
+            </div>
+
+            <div class="card px-4 py-2">
+                <p class="text-xs text-muted">Modo</p>
+                <p class="primary font-bold">Ranked</p>
+            </div>
+
+            <div class="card px-4 py-2">
+                <p class="text-xs text-muted">Meta</p>
+                <p class="primary font-bold">Mejora</p>
+            </div>
+
+        </div>
+
+        <!-- JUEGOS -->
+        <div class="space-y-4 pt-2">
+
+            <h2 class="text-xl font-semibold">
+                Juegos
+            </h2>
+
+            {% for game in games %}
+            <a href="/gamer/{{ game.slug }}" class="card p-5 block">
+
+                <h3 class="text-lg font-bold primary mb-1">
+                    {{ game.name }}
+                </h3>
+
+                <p class="text-muted text-sm mb-3">
+                    Estadísticas competitivas
+                </p>
+
+                <div class="h-1 bg-white/10 rounded">
+                    <div class="h-1 bg-gradient-to-r from-purple-500 to-cyan-400 w-2/3"></div>
+                </div>
+
+            </a>
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    <!-- COLUMNA DERECHA (IMAGEN ALINEADA) -->
+    <div class="flex justify-center md:justify-end">
+
+        <img src="{% static 'img/foto_gamer.png' %}"
+             class="w-64 md:w-80 object-contain self-start">
+
+    </div>
+
+</section>
+
+{% endblock %}

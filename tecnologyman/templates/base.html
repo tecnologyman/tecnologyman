@@ -1,0 +1,237 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tecnologyman</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #8b5cf6;
+            --secondary: #06b6d4;
+            --card: rgba(15, 23, 42, 0.75);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #e5e7eb;
+            background: #020617;
+            overflow-x: hidden;
+        }
+
+        /* 🌌 FONDO GLOBAL */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(139,92,246,0.35), transparent),
+                radial-gradient(circle at 80% 20%, rgba(6,182,212,0.3), transparent),
+                radial-gradient(circle at 60% 80%, rgba(236,72,153,0.25), transparent);
+            filter: blur(60px);
+            animation: moveBg 20s ease-in-out infinite alternate;
+            z-index: -2;
+        }
+
+        @keyframes moveBg {
+            0% { transform: translate(0,0); }
+            100% { transform: translate(40px, -40px); }
+        }
+
+        /* 🔴 VALORANT */
+        .theme-valorant {
+            background: #050505 !important;
+        }
+
+        .theme-valorant::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(circle at top, rgba(255,70,85,0.2), transparent);
+            filter: blur(80px);
+            z-index: -2;
+        }
+
+        .theme-valorant .card {
+            background: rgba(10,10,10,0.9);
+            border: 1px solid rgba(255,70,85,0.2);
+        }
+
+        .theme-valorant .card:hover {
+            box-shadow: 0 0 30px rgba(255,70,85,0.4);
+        }
+
+        /* NAV */
+        .glass {
+            background: rgba(2,6,23,0.7);
+            backdrop-filter: blur(14px);
+        }
+
+        /* CARDS */
+        .card {
+            background: var(--card);
+            backdrop-filter: blur(12px);
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 0 25px var(--primary);
+        }
+
+        /* BOTONES */
+        .btn {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 10px 18px;
+            border-radius: 10px;
+            transition: all 0.25s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            filter: brightness(1.15);
+        }
+
+        /* HOVER GLOBAL */
+        .hover-float {
+            transition: transform 0.25s ease;
+        }
+
+        .hover-float:hover {
+            transform: translateY(-6px) scale(1.02);
+        }
+
+        /* TEXTOS */
+        .primary { color: var(--primary); }
+        .text-soft { color: #d1d5db; }
+        .text-muted { color: #9ca3af; }
+
+        .title-glow {
+            background: linear-gradient(90deg, #fff, #a78bfa, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ✨ GLOW SUAVE GLOBAL */
+        .glow {
+            position: relative;
+        }
+
+        .glow::after {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            filter: blur(15px);
+            opacity: 0;
+            transition: 0.3s;
+            z-index: -1;
+        }
+
+        .glow:hover::after {
+            opacity: 0.4;
+        }
+
+        /* 🧠 PROFUNDIDAD */
+        .depth {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        /* ✨ HOVER MÁS PREMIUM */
+        .card:hover {
+            transform: translateY(-8px) scale(1.025);
+            box-shadow: 0 0 40px var(--primary);
+        }
+
+        /* 🎯 BOTONES MÁS PRO */
+        .btn {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%);
+        }
+
+        .btn:hover::before {
+            transform: translateX(100%);
+            transition: 0.6s;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        ::selection {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* NAV PREMIUM */
+        .nav-link {
+            position: relative;
+            padding: 6px 4px;
+            transition: all 0.25s ease;
+        }
+
+        .nav-link:hover {
+            color: #c4b5fd;
+            transform: translateY(-2px);
+        }
+
+        /* línea animada */
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 0%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body class="{% block theme %}{% endblock %}">
+
+<nav class="glass fixed w-full top-0 z-50 border-b border-white/10">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+
+        <!-- LOGO -->
+        <a href="/" class="text-xl font-bold title-glow hover:scale-105 transition">
+            Tecnologyman
+        </a>
+
+        <!-- MENU -->
+        <div class="space-x-6 hidden md:flex text-sm items-center">
+
+            <a href="/" class="nav-link">Inicio</a>
+            <a href="/gamer" class="nav-link">Gamer</a>
+            <a href="/creator" class="nav-link">Creador</a>
+            <a href="/professional" class="nav-link">Profesional</a>
+
+        </div>
+
+    </div>
+</nav>
+
+<main class="pt-28 max-w-5xl mx-auto px-4">
+    {% block content %}{% endblock %}
+</main>
+
+</body>
+</html>

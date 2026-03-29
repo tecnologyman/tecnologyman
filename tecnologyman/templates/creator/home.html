@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="space-y-12">
+
+    <!-- HERO -->
+    <div class="max-w-2xl space-y-4">
+
+        <h1 class="text-5xl font-bold title-glow">
+            Creador de contenido
+        </h1>
+
+        <p class="text-soft">
+            Gaming, streaming y contenido multiplataforma.
+        </p>
+
+        <p class="text-muted text-sm">
+            Desarrollo contenido enfocado en rendimiento, entretenimiento
+            y comunidad a través de distintas plataformas digitales.
+        </p>
+
+    </div>
+
+    <!-- 🔥 PLATAFORMAS PRINCIPALES -->
+    <div class="grid md:grid-cols-4 gap-5">
+
+        <!-- INSTAGRAM (PRINCIPAL) -->
+        <a href="https://instagram.com/tecnologyman" target="_blank"
+           class="card p-5 group">
+
+            <h3 class="text-lg font-bold text-pink-400 mb-1">
+                Instagram
+            </h3>
+
+            <p class="text-muted text-sm mb-3">
+                Red principal
+            </p>
+
+            <div class="h-1 bg-white/10 rounded">
+                <div class="h-1 bg-pink-400 w-3/4 group-hover:w-full transition-all"></div>
+            </div>
+
+        </a>
+
+        <!-- TIKTOK -->
+        <a href="https://tiktok.com/@tecnologyman.tv" target="_blank"
+           class="card p-5 group">
+
+            <h3 class="text-lg font-bold text-cyan-400 mb-1">
+                TikTok
+            </h3>
+
+            <p class="text-muted text-sm mb-3">
+                Clips y highlights
+            </p>
+
+            <div class="h-1 bg-white/10 rounded">
+                <div class="h-1 bg-cyan-400 w-3/4 group-hover:w-full transition-all"></div>
+            </div>
+
+        </a>
+
+        <!-- TWITCH -->
+        <a href="https://twitch.tv/tecnologyman" target="_blank"
+           class="card p-5 group">
+
+            <h3 class="text-lg font-bold text-purple-400 mb-1">
+                Twitch
+            </h3>
+
+            <p class="text-muted text-sm mb-3">
+                Streams en vivo
+            </p>
+
+            <div class="h-1 bg-white/10 rounded">
+                <div class="h-1 bg-purple-500 w-3/4 group-hover:w-full transition-all"></div>
+            </div>
+
+        </a>
+
+        <!-- YOUTUBE -->
+        <a href="https://youtube.com/@tecnologyman01" target="_blank"
+           class="card p-5 group">
+
+            <h3 class="text-lg font-bold text-red-400 mb-1">
+                YouTube
+            </h3>
+
+            <p class="text-muted text-sm mb-3">
+                Videos y contenido largo
+            </p>
+
+            <div class="h-1 bg-white/10 rounded">
+                <div class="h-1 bg-red-400 w-3/4 group-hover:w-full transition-all"></div>
+            </div>
+
+        </a>
+
+    </div>
+
+    <!-- 📸 SNAPSHOT INSTAGRAM -->
+    <div class="space-y-6">
+
+        <h2 class="text-2xl font-semibold">
+            Instagram
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <!-- PERFIL -->
+            <div class="card p-6">
+
+                <h3 class="text-lg font-semibold text-pink-400 mb-2">
+                    @tecnologyman
+                </h3>
+
+                <p class="text-muted text-sm mb-4">
+                    Gaming · Streaming · Lifestyle
+                </p>
+
+                <a href="https://instagram.com/tecnologyman"
+                   target="_blank"
+                   class="btn text-sm">
+                    Ver perfil
+                </a>
+
+            </div>
+
+            <!-- EMBED POST -->
+            <div class="card p-4">
+
+                <iframe
+                    class="w-full aspect-square rounded"
+                    src="https://www.instagram.com/p/B3DV7AWBiF2/embed"
+                    frameborder="0">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- 🎵 SNAPSHOT TIKTOK -->
+    <div class="space-y-6">
+
+        <h2 class="text-2xl font-semibold">
+            TikTok
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <!-- PERFIL -->
+            <div class="card p-6">
+
+                <h3 class="text-lg font-semibold text-cyan-400 mb-2">
+                    @tecnologyman.tv
+                </h3>
+
+                <p class="text-muted text-sm mb-4">
+                    Clips, highlights y contenido corto
+                </p>
+
+                <a href="https://tiktok.com/@tecnologyman.tv"
+                   target="_blank"
+                   class="btn text-sm">
+                    Ver perfil
+                </a>
+
+            </div>
+
+            <!-- VIDEO EMBED -->
+            <div class="card p-4">
+
+                <iframe
+                    class="w-full aspect-[9/16] rounded"
+                    src="https://www.tiktok.com/embed/7482284345261165879"
+                    frameborder="0">
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

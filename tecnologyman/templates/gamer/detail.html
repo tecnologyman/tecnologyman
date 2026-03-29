@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block theme %}theme-valorant{% endblock %}
+
+{% block content %}
+
+<section class="mb-16">
+
+    <h1 class="text-5xl font-bold text-[#ff4655] mb-2">
+        {{ game.name }}
+    </h1>
+
+    <p class="text-gray-400">
+        Estadísticas competitivas
+    </p>
+
+</section>
+
+<!-- STATS -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-14">
+
+    {% for stat in stats %}
+    <div class="card p-6 text-center">
+
+        <p class="text-xs text-gray-500 uppercase">
+            {{ stat.label }}
+        </p>
+
+        <p class="text-3xl font-bold text-[#ff4655] mt-2">
+            {{ stat.value }}
+        </p>
+
+    </div>
+    {% endfor %}
+
+</section>
+
+<!-- PERFIL -->
+<section class="card p-6">
+
+    <h2 class="text-lg font-semibold text-[#ff4655] mb-2">
+        Perfil competitivo
+    </h2>
+
+    <p class="text-gray-400">
+        Jugador enfocado en toma de decisiones, posicionamiento y consistencia.
+    </p>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,236 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="space-y-14">
+
+    <div class="flex flex-col md:flex-row justify-between items-start gap-8">
+
+    <!-- TEXTO -->
+    <div class="max-w-2xl space-y-4">
+
+        <h1 class="text-5xl font-bold title-glow">
+            Ingeniero Informático
+        </h1>
+
+        <p class="text-soft text-lg">
+            Desarrollo de software, redes, sistemas y cloud.
+        </p>
+
+            <p class="text-muted text-sm">
+                Especializado en desarrollo web, administración de sistemas,
+                redes de computadores y soluciones tecnológicas en la nube,
+                con enfoque en rendimiento, seguridad y escalabilidad.
+            </p>
+
+        </div>
+
+        <!-- LINKEDIN CARD -->
+        <div class="card p-5 w-full md:w-72 hover-float">
+
+            <p class="text-xs text-muted mb-2">
+                Perfil profesional
+            </p>
+
+            <h3 class="font-semibold mb-3">
+                LinkedIn
+            </h3>
+
+            <a href="https://www.linkedin.com/in/matiasaguayohernandezz/"
+            target="_blank"
+            class="btn w-full text-center block">
+                Ver perfil
+            </a>
+
+        </div>
+
+    </div>
+    <!-- QUIÉN SOY -->
+        <div class="card p-6 max-w-2xl">
+
+            <h2 class="text-xl font-semibold primary mb-2">
+                Sobre mí
+            </h2>
+
+            <p class="text-sm text-muted leading-relaxed">
+                Soy <span class="text-white font-medium">Matías Aguayo Hernández</span>, 
+                ingeniero informático enfocado en el desarrollo de soluciones tecnológicas, 
+                redes de computadores y experiencia de usuario. 
+
+                Me caracterizo por integrar conocimientos de software, infraestructura 
+                y diseño para construir sistemas eficientes, escalables y centrados en el usuario.
+            </p>
+
+        </div>
+    <!-- AREAS -->
+    <div class="grid md:grid-cols-4 gap-6">
+
+        <div class="card p-6">
+            <h3 class="text-lg font-bold primary mb-2">
+                Desarrollo
+            </h3>
+            <p class="text-muted text-sm">
+                Backend, frontend y arquitectura de software.
+            </p>
+        </div>
+
+        <div class="card p-6">
+            <h3 class="text-lg font-bold primary mb-2">
+                UX/UI
+            </h3>
+            <p class="text-muted text-sm">
+                Diseño de interfaces, experiencia de usuario y evaluación UX.
+            </p>
+        </div>
+
+        <div class="card p-6">
+            <h3 class="text-lg font-bold primary mb-2">
+                Redes & Sistemas
+            </h3>
+            <p class="text-muted text-sm">
+                Administración de servidores, redes, virtualización y entornos empresariales.
+            </p>
+        </div>
+
+        <div class="card p-6">
+            <h3 class="text-lg font-bold primary mb-2">
+                Cloud & Seguridad
+            </h3>
+            <p class="text-muted text-sm">
+                Infraestructura, despliegue, ciberseguridad y servicios en la nube.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- STACK -->
+    <div class="space-y-6">
+
+        <h2 class="text-2xl font-semibold">
+            Tecnologías
+        </h2>
+
+        <div class="flex flex-wrap gap-3">
+
+            <!-- Desarrollo -->
+            <span class="card px-4 py-2 text-sm">Python</span>
+            <span class="card px-4 py-2 text-sm">Django</span>
+            <span class="card px-4 py-2 text-sm">JavaScript</span>
+            <span class="card px-4 py-2 text-sm">Tailwind</span>
+
+            <!-- Sistemas -->
+            <span class="card px-4 py-2 text-sm">Linux</span>
+            <span class="card px-4 py-2 text-sm">Windows Server</span>
+            <span class="card px-4 py-2 text-sm">Proxmox</span>
+            <span class="card px-4 py-2 text-sm">Virtualización</span>
+
+            <!-- Redes -->
+            <span class="card px-4 py-2 text-sm">Networking</span>
+            <span class="card px-4 py-2 text-sm">VLANs</span>
+            <span class="card px-4 py-2 text-sm">Routing</span>
+            <span class="card px-4 py-2 text-sm">Cisco</span>
+
+            <!-- Cloud & Seguridad -->
+            <span class="card px-4 py-2 text-sm">Cloud</span>
+            <span class="card px-4 py-2 text-sm">Docker</span>
+            <span class="card px-4 py-2 text-sm">Ciberseguridad</span>
+
+        </div>
+
+    </div>
+
+    <!-- PROYECTOS -->
+    <div class="space-y-6">
+
+        <h2 class="text-2xl font-semibold">
+            Proyectos
+        </h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+
+            <div class="card p-6">
+
+                <h3 class="text-lg font-bold primary mb-2">
+                    Plataforma IoT
+                </h3>
+
+                <p class="text-muted text-sm mb-4">
+                    Sistema de monitoreo en tiempo real con sensores y dashboard web.
+                </p>
+
+                <div class="text-xs text-gray-500">
+                    Arduino · Web · Dashboard
+                </div>
+
+            </div>
+
+            <div class="card p-6">
+
+                <h3 class="text-lg font-bold primary mb-2">
+                    Sistema UX Predictivo
+                </h3>
+
+                <p class="text-muted text-sm mb-4">
+                    Plataforma enfocada en experiencia de usuario y análisis predictivo.
+                </p>
+
+                <div class="text-xs text-gray-500">
+                    UX · Data · Web
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CONTACTO + CV -->
+    <div class="card p-6 flex flex-col md:flex-row justify-between items-center gap-6">
+
+        <!-- INFO -->
+        <div class="space-y-2 text-center md:text-left">
+
+            <h3 class="font-semibold">
+                Contacto
+            </h3>
+
+            <!-- EMAIL -->
+            <p class="text-sm text-muted">
+                📧 
+                <a href="mailto:matiasaguacho@gmail.com" class="hover:text-white transition">
+                    matiasaguacho@gmail.com
+                </a>
+            </p>
+
+            <!-- TELEFONO (OPCIONAL) -->
+            <p class="text-sm text-muted">
+                📱 
+                <a href="tel:+56940338039" class="hover:text-white transition">
+                    +56 9 4033 8039
+                </a>
+            </p>
+
+        </div>
+
+        <!-- BOTONES -->
+        <div class="flex gap-3">
+
+            <!-- VER CV -->
+            <a href="/static/docs/CV.pdf" target="_blank"
+            class="border border-white/20 px-4 py-2 rounded hover:border-white transition">
+                Ver CV
+            </a>
+
+            <!-- DESCARGAR CV -->
+            <a href="/static/docs/CV.pdf" download
+            class="btn">
+                Descargar CV
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

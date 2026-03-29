@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<section class="grid md:grid-cols-2 gap-8 items-center mb-16">
+
+    <div class="space-y-5">
+
+        <h1 class="text-4xl md:text-6xl font-bold title-glow leading-tight">
+            Tecnologyman
+        </h1>
+
+        <p class="text-soft text-lg">
+            Ingeniería, gaming competitivo y creación de contenido
+        </p>
+
+        <p class="text-muted">
+            Ingeniero informático, creador de contenido y jugador competitivo.
+            Construyendo soluciones tecnológicas mientras desarrollo una identidad digital.
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+            <a href="/gamer" class="btn hover-float glow">Gamer</a>
+            <a href="/creator" class="btn hover-float glow">Creador</a>
+            <a href="/professional" class="border border-white/20 px-4 py-2 rounded hover:border-white transition">
+                Profesional
+            </a>
+        </div>
+
+    </div>
+
+    <div class="flex justify-center relative hover-float">
+
+        <img src="{% static 'img/tu_foto.png' %}"
+             class="w-64 md:w-80 object-contain relative z-10">
+
+        <div class="absolute w-80 h-80 bg-purple-500/30 blur-3xl rounded-full"></div>
+        <div class="absolute w-64 h-64 bg-cyan-400/20 blur-3xl rounded-full"></div>
+
+    </div>
+
+</section>
+
+<section class="mb-16">
+
+    <h2 class="text-xl font-semibold mb-6">
+        Mis áreas principales
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-5">
+
+        <a href="/gamer" class="card p-5 hover-float glow depth">
+            <h3 class="text-lg font-bold primary">Gamer</h3>
+            <p class="text-muted text-sm mt-2">
+                Competitivo y enfocado en mejora constante.
+            </p>
+        </a>
+
+        <a href="/creator" class="card p-5 hover-float glow depth">
+            <h3 class="text-lg font-bold primary">Creador</h3>
+            <p class="text-muted text-sm mt-2">
+                Streams y contenido multiplataforma.
+            </p>
+        </a>
+
+        <a href="/professional" class="card p-5 hover-float glow depth">
+            <h3 class="text-lg font-bold primary">Profesional</h3>
+            <p class="text-muted text-sm mt-2">
+                Software, UX/UI y desarrollo.
+            </p>
+        </a>
+
+    </div>
+
+</section>
+
+<section class="card p-8">
+
+    <h2 class="text-2xl font-semibold mb-4">
+        Sobre mí
+    </h2>
+
+    <p class="text-muted leading-relaxed">
+        Soy ingeniero informático enfocado en experiencia de usuario, desarrollo
+        de software y sistemas tecnológicos. Paralelamente, desarrollo mi identidad
+        como Tecnologyman, combinando gaming competitivo y creación de contenido.
+    </p>
+
+</section>
+
+{% endblock %}
